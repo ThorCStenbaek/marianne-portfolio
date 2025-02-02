@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"  // SQLite database file
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Project {
+  id            Int      @id @default(autoincrement())
+  title         String
+  description   String
+  primaryImage  String
+  link          String?
+  createdAt     DateTime @default(now())
+  
+  categories    ProjectCategory[]   // Many-to-many relationship with categories
+  technologies  ProjectTechnology[] // Many-to-many relationship with technologies
+  metas         ProjectMeta[]       // One-to-many relationship with project meta
+}
+
+model Category {
+  id            Int      @id @default(autoincrement())
+  name          String   @unique
+  projects      ProjectCategory[]  // Many-to-many relationship with projects
+}
+
+model Technology {
+  id            Int      @id @default(autoincrement())
+  name          String   @unique
+  image         String?
+  projects      ProjectTechnology[] // Many-to-many relationship with projects
+}
+
+model ProjectCategory {
+  projectId     Int
+  categoryId    Int
+  project       Project  @relation(fields: [projectId], references: [id])
+  category      Category @relation(fields: [categoryId], references: [id])
+
+  @@id([projectId, categoryId])  // Composite key for the many-to-many relationship
+}
+
+model ProjectTechnology {
+  projectId     Int
+  technologyId  Int
+  project       Project  @relation(fields: [projectId], references: [id])
+  technology    Technology @relation(fields: [technologyId], references: [id])
+
+  @@id([projectId, technologyId])  // Composite key for the many-to-many relationship
+}
+
+model ProjectMeta {
+  id            Int      @id @default(autoincrement())
+  type          String   // Use String for IMAGE, VIDEO, GIF instead of enum
+  url           String   // URL to the image, video, or gif
+  projectId     Int
+  project       Project  @relation(fields: [projectId], references: [id])
+}

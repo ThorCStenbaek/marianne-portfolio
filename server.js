@@ -241,23 +241,18 @@ app.get('/api', (req, res) => {
 app.get('/api/education', (req, res) => {
   const educationData = [
     {
-      name: 'High School',
-      date: '2006 - 2010',
-      description: 'Graduated with honors, focusing on sciences and mathematics.',
+      name: 'Upper Secondary Education at Aarhus Business College',
+      date: 'August 2008 - June 2011',
+      description: 'Graduated with studies in Communications.',
       extraInfo:""
     },
     {
-      name: 'Bachelor of Computer Science',
-      date: '2010 - 2014',
-      description: 'Completed a bachelor\'s degree in Computer Science with a focus on software engineering.',
+      name: 'Bachelor Degree in Computer Graphic Arts at The Animation Workshop',
+      date: 'August 2017 - January 2021',
+      description: 'Completed a bachelor\'s degree in Computer Graphic Arts. The whole 3D pipeline',
       extraInfo: ""
     },
-    {
-      name: 'Master of Computer Science',
-      date: '2014 - 2016',
-      description: 'Specialized in artificial intelligence and machine learning.',
-      extraInfo: ""
-    }
+
   ];
 
   res.json(educationData);
@@ -267,24 +262,32 @@ app.get('/api/education', (req, res) => {
 app.get('/api/work', (req, res) => {
   const workTimeline = [
     {
-      job: 'Software Developer',
-      date: '2018 - 2020',
-      description: 'Worked on developing web applications using React and Node.js.',
-      extraInfo: 'Key Projects: Project A, Project B',
+      job: "3D Generalist at Hydralab",
+      date: "August 2024 - October 2024",
+      description: "Bedache Commercial for Posturpedic, lookdev, modelling, grooming, texturing for little red furball character for American Client.",
+      extraInfo: "",
     },
     {
-      job: 'Lead Developer',
-      date: '2020 - 2022',
-      description: 'Led a team of developers for large-scale projects.',
-      extraInfo: 'Technologies: React, Node.js, AWS',
+      job: "Groom Artist at Pixel Zoo Animation",
+      date: "May 2022 - March 2024",
+      description: "Series Mermaze, Rainbow High, and L.O.L, lookdev and creation of grooms.",
+      extraInfo: "",
     },
     {
-      job: 'Senior Engineer',
-      date: '2022 - Present',
-      description: 'Specialized in cloud-based solutions and mentoring junior developers.',
-      extraInfo: 'Key Achievements: Optimized CI/CD pipelines, Reduced cloud costs by 20%',
+      job: "Groom Artist at A Film Studios",
+      date: "June 2021 - February 2022",
+      description: 'Feature film, "Mugge og hans mærkelig hjerne." Grooming all characters, optimizing and making grooms that are transferable.',
+      extraInfo: "",
+    },
+    {
+      job: "3D Generalist Props (Game and Film) at Wired Fly",
+      date: "August 2020 - February 2021",
+      description: 'Qvisten "Folk og Røver i Kardemomme By" and Vokabulantis Game. Sculpting and modelling 3D print assets, printing and refining. Photogrammetry and transferring real-life textures.',
+      extraInfo: "",
     },
   ];
+  
+  
 
   res.json(workTimeline);
 });

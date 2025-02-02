@@ -1,0 +1,101 @@
+/* Contact.css */
+
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: #f4f9ff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: var(--text-light);
+    text-align: center;
+    background: linear-gradient(to bottom, #0070f3, #00c6ff);
+    
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #0070f3; /* Light blue color for label text */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #cce7ff; /* Light border to maintain consistency */
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border: 2px solid #0070f3; /* Highlight input on focus */
+    outline: none;
+    box-shadow: 0 0 12px rgba(0, 112, 243, 0.2);
+  }
+  
+  .submit-button {
+    background: linear-gradient(to right, #0070f3, #00c6ff);
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #00c6ff, #0070f3);
+  }
+  
+  .submit-button:active {
+    transform: scale(0.98);
+  }
+  
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 30px 10px;
+    }
+  
+    .contact-form {
+      padding: 20px;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 0.9em;
+    }
+  
+    .submit-button {
+      font-size: 1em;
+      padding: 12px 20px;
+    }
+  }
+  

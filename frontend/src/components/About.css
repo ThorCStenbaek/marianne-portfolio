@@ -1,0 +1,293 @@
+/* About.css */
+
+.about-section {
+    width: 100%; 
+    margin: 0 auto;
+    padding-bottom: 30px;
+    background: linear-gradient(to bottom, #0070f3, #00c6ff); /* Matching gradient to work timeline */
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* White text to contrast with the gradient background */
+    
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #fff; /* White color for heading */
+  }
+  
+  .about-container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .profile-picture {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff; /* Border to make the profile picture stand out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  .box-title{
+    margin-top:0px;
+  }
+  h2 {
+    font-size: 2em;
+    margin: 10px 0;
+  }
+  
+  .role {
+    font-size: 1.3em;
+    color: #f0f0f0;
+  }
+  
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  
+  .skills-section {
+    background: #f4f9ff; /* Light blue/white background for contrast against gradient */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 90%; 
+    transform: translateX(20px);
+    opacity: 0;
+   
+  }
+  
+  .skills-section h3, .resume-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #0070f3; /* Match the blue color for a consistent theme */
+  }
+  
+  .skills-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.8;
+    color: #333; /* Darker text for readability */
+  }
+  
+  .skills-section p {
+    color: #333;
+    line-height: 1.8;
+  }
+
+  .skills-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+    animation: fadeInSlide 0.6s ease-out forwards;
+  }
+  
+/* About.css */
+
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: white; /* Match the theme color */
+  }
+  
+  .location-icon {
+    margin-right: 8px;
+    color: white; /* Match the color of the role */
+  }
+  
+
+
+  @media (min-width: 768px) {
+    .about-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .profile-container {
+      flex: 1;
+      margin-right: 40px;
+    }
+  
+    .details-container {
+      flex: 2;
+    }
+  
+    .skills-section, .resume-section {
+      margin-bottom: 40px;
+    }
+  }
+  
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+
+
+
+.context {
+   
+    position: relative;
+   
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    position: relative;
+ 
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+   width:100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    background-size: contain; 
+    
+}
+.circles li > img{
+  height:100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}

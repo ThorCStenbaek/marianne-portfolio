@@ -1,0 +1,149 @@
+/* WorkTimeline.css */
+.timeline-container {
+  
+  margin: 0 auto;
+  padding: 0px 20px;
+  position: relative;
+  /*
+  background: linear-gradient(to bottom, #f9f9f9, #fff);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  */
+  overflow: hidden;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  
+  
+}
+
+.timeline-bar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 0;
+  background: linear-gradient(to bottom, #0070f3, #00c6ff);
+  z-index: 0;
+  transition: height 0.5s ease-out;
+}
+
+.timeline-item {
+  width: 45%;
+  margin: 20px 0;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+}
+
+.timeline-item.left {
+  align-self: flex-start;
+  transform: translateX(-20px);
+}
+
+.timeline-item.right {
+  align-self: flex-end;
+  transform: translateX(20px);
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeInSlide 0.6s ease-out forwards;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  
+  border: 5px solid transparent; /* Space for the gradient */
+  border-image: linear-gradient(to bottom, #0070f3, #00c6ff) 1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+.timeline-content:hover {
+  transform: scale(1.03);
+  /*box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); */
+}
+
+
+.timeline-date {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.extra-info {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #0070f3;
+  border-radius: 50%;
+  z-index: 2;
+  top: 0;
+}
+
+.edu-header{
+  mix-blend-mode: screen;
+  background: white;
+  margin:0px;
+  font-size: 60px;
+}
+
+.edu-header-bg{
+  background: linear-gradient(to bottom, #0070f3, #00c6ff);
+  position: absolute; 
+  height:0%; width: 100%;
+   transition: all 1s ease-out;
+}
+
+.work-header{
+  margin:0px;
+}
+
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    align-self: center;
+    margin: 20px 0;
+  }
+
+  .timeline-bar {
+    display: none; /* Hide central bar on mobile */
+  }
+}

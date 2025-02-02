@@ -1,0 +1,90 @@
+/* ContactInformation.css */
+
+.contact-information-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #0070f3, #00c6ff); /* Gradient similar to other sections */
+    border-radius: 16px;
+   
+    color: #ffffff;
+    text-align: center;
+    margin-top:50px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+  }
+  
+  .contact-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .contact-icon {
+    font-size: 4em;
+    color: #0070f3;
+    margin-right: 20px;
+  }
+
+  .contact-details{
+    text-align: left;
+  }
+  
+  .contact-details h3 {
+    font-size: 1.5em;
+    margin: 0 0 5px;
+    color: #0070f3; /* Color to match the theme */
+  }
+  
+  .contact-details p {
+    font-size: 1.1em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .contact-details a {
+    text-decoration: none;
+    color: #0070f3;
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      gap: 10px;
+    }
+  
+    .contact-item {
+      padding: 15px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-icon {
+      margin-bottom: 10px;
+    }
+  }
+  

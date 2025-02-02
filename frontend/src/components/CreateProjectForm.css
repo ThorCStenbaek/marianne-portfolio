@@ -1,0 +1,112 @@
+/* Form container */
+.create-project__form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form group spacing */
+  .create-project__form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Labels */
+  .create-project__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  /* Input fields */
+  .create-project__input,
+  .create-project__textarea,
+  .create-project__file-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .create-project__input:focus,
+  .create-project__textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Textarea for description */
+  .create-project__textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  /* File inputs */
+  .create-project__file-input {
+    padding: 8px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  /* Meta input spacing */
+  .create-project__meta-input {
+    margin-top: 10px;
+  }
+  
+  /* Meta header */
+  .create-project__meta-header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Meta preview section */
+  .create-project__meta-preview {
+    margin-bottom: 15px;
+  }
+  
+  /* Image and video previews */
+  .create-project__image-preview {
+    width: 150px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .create-project__video-preview {
+    width: 300px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Submit button */
+  .create-project__submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-project__submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .create-project__toggle-list{
+    display: flex;
+  }
+
+  .selected{
+    background: 'green'
+  }

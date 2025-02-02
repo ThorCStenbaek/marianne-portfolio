@@ -1,0 +1,598 @@
+
+:root {
+  --main-bg: #003366; /* Dark blue background */
+  --base: #4a00b4;    /* Purple */
+  --base-2: #00b4ff;  /* Light blue */
+  --header: #0a5891;  /* Mid blue */
+  --text-light: #edede9; /* Light text */
+  --highlight: #00b4ff; /* Highlight blue */
+  --header-gradient: #4a00b4;
+
+  --main-bg-contrast: #0077b6;
+  
+}
+
+html {
+	scroll-behavior: smooth;
+  }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+
+  
+.menu-profile-picture {
+    width: 75%;
+	
+    border-radius: 50%;
+    object-fit: cover;
+    /* Border to make the profile picture stand out */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	margin-top: 40px;
+  }
+
+
+.Menu {
+  width: 20vw; /* Fixed width for the menu */
+  min-width: 200px; /* Minimum width so it doesn’t shrink too much */
+  height: 100vh;
+  background-color: var(--base);
+  position: fixed; /* Keep the menu fixed on the left */
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Allows scrolling inside the menu if needed */
+}
+
+.entry-title{
+	display:none;
+}
+.site-footer{
+	display:none; 
+}
+
+.cover h2{
+	text-decoration: none !important; 
+}
+
+.current{
+	background: var(--base-2);
+}
+
+.base2{
+	background: var(--base-2);
+	height: 2000px;
+	
+}
+.main-bg{
+	background: var(--main-bg);
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  width: 100vw; /* Ensure the app fills the full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  overflow-x: hidden; /* Prevent scrolling to the right */
+}
+
+.site-header{
+	display: none; 
+}
+.br{
+	border-radius: 15px;
+}
+
+.side-menu{
+	     
+    left: 0px;
+    top: 0px;
+  
+   
+    width: 20vw;
+    position: fixed;
+    height: 100%;
+}
+	
+.side-menu-innerdiv{
+	position: absolute; 
+	background: var(--base);
+flex-direction: column;
+	display: flex; 
+	justify-content: flex-start;
+	align-items: center;
+	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+   height: 100%;
+	width: 100%;
+
+		z-index: 10000;
+	
+		background:url(http://thorstenbaek.com/wp-content/uploads/2023/03/Layer-9.png), linear-gradient(0deg,var(--base-2) -20%, var(--base) 10%);
+	
+		background: linear-gradient(90deg,var(--header-gradient)-10%, var(--header) 100%)
+	
+}
+.side-menu-border{
+	background: var(--base-2); 
+	width: 100%; 
+	position: absolute;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+	
+}
+.side-nav-element{
+	padding-right: 10px; 
+	font-family: 'Candara','Calisto MT'; 
+	text-transform: uppercase; 
+	text-decoration: none; 
+	font-weight: 600; 
+	padding-top: 5px;
+	padding-bottom: 5px; 
+	text-align: right;
+	font-size: 3vw; 
+	color: #edede9; 
+	cursor: pointer; 
+	transition: font-size 500ms;
+	
+}
+.side-nav-element:hover{
+	font-size: 3.5vw; 
+}
+
+.sidebar-nav{
+	width: 100%; 
+	
+}
+
+
+#content{
+	padding-top: 0px !important; 
+	padding-left: 0px;
+	display: flex;
+}
+
+#primary {
+  flex: 1;
+  overflow-y: auto; /* Allows scrolling of content */
+  overflow-x:clip;
+  box-sizing: border-box;
+  background: white;
+}
+
+
+.side-nav-element{
+	display:block; 
+	
+}
+
+.entry-content{
+	margin-top: 0px !important; 
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+	/* SCROLL BAR*/
+
+/* custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* PROJECTS */
+
+.cover >*{
+	min-width: 300px;
+	text-align: center;
+}
+
+
+.cover {
+	color:white; 
+	display: block;
+	opacity: 0;
+	transition: all 1s ease-in-out; /* Transition for opacity */
+	background: linear-gradient(to bottom, #0070f3, #00c6ff);
+    /*var(--base-2);*/
+	justify-content: center; 
+	position: absolute;
+	top: 0;
+	
+	height: 100%;
+	width: 0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	left: 50%;
+}
+
+.post:hover .cover {
+	opacity: 1; /* Use 0.75 for 75% opacity */
+	width: 100%; 
+	left:0%;
+}
+
+.post {
+	position: relative;
+	transition: all 1s;
+	cursor: pointer;
+}
+
+
+.allProjects{
+	 display: grid;
+  grid-template-columns: repeat(3, 1fr);
+	transition: all 0.5s; 
+  width: 100%; 
+	
+}
+.post-img{
+	height: 100%; 
+  max-width: 100%;
+}
+
+.projects-header{
+	background: linear-gradient(178deg, #0070f3 25%, #00c6ff);/*var(--header);*/
+	    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+}
+	
+.projects-menu-button{
+	padding-bottom: 10px;
+	padding-top: 10px; 
+	cursor: pointer; 
+	border: 1px solid whitesmoke;
+	border-top: None; 
+	border-bottom: None; 
+	    font-family: 'Candara','Calisto MT';
+	font-weight: 600; 
+	color:white; 
+}
+
+.projects-menu-button >p{
+	font-family: 'Candara','Calisto MT';
+	margin:0px;
+	transition: all 250ms;
+	transform: scale(1.1);
+}
+.projects-menu-button >p:hover{
+	transform: scale(1.2);
+}
+
+.projects-menu-button:first-child{
+	border-left: None;
+}
+.projects-menu-button:last-child{
+	border-right: None;
+}
+
+.timeline{
+height: auto; 
+	padding-right: 10%; 
+	padding-left: 10%; 
+}
+
+
+
+.container-timeline{
+	padding: 18px 40px;
+    position: relative;
+  
+    width: 50%;
+	height: 200px; 
+}
+.left{
+	left: 0;
+}
+
+
+
+.container-timeline::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+	
+    background-color: var(--main-bg-contrast);
+    border: 4px solid var(--main-bg);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.right::after {
+    left: -12px;
+}
+.content-timeline{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	    border-radius: 2px;
+}
+
+.content-timeline p{
+	margin: 0px; 
+}
+.timeline-job{
+	padding: 5px; 
+	background: var(--main-bg-contrast);
+	font-weight: 700; 
+}
+.timeline-date{
+	padding: 5px; 
+	background: var(--main-bg-contrast-2);
+	font-weight: 600;
+}
+.timeline-description{
+	padding: 5px; 
+	background: var(--main-bg-contrast-3);
+	font-weight: 500;
+}
+.left .content-timeline p {
+	text-align: right; 
+	
+}
+.left .content-timeline p:last-child {
+	text-align: left;
+	
+}
+/*
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 19px;
+    width: 0;
+    z-index: 1;
+	
+    right: 20px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--main-bg-contrast) ;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 19px;
+    width: 0;
+    z-index: 1;
+    left: 20px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--main-bg-contrast) transparent transparent;
+}
+*/
+
+.resume_section{
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+}
+.resume-top{
+	display: flex; 
+	    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.resume-bottom{
+	margin-top: 30px;
+	display: flex; 
+	justify-content: center; 
+}
+
+.resume-container{
+	width:50%; 
+	background: var(--base);
+	padding: 2%; 
+	border-radius: 5px; 
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.resume-picture{
+	    border-radius: 100%;
+	width: 20%; 
+	margin-right: 100px; 
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	    margin: 0px; 
+	margin-right: 25px;
+}
+.name-title-container{
+	width: 50%; 
+}
+.resume-name{
+
+	font-size: 4.5vw; 
+	margin:0px;
+}
+.resume-title{
+	font-size: 2vw; 
+}
+.personal_skills_container{
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	width: 20%; 
+	margin-right: 25px;
+	background: var(--base);
+	padding: 2%; 
+	border-radius: 5px; 
+}
+.personal_skills{
+margin: 0 0 1.5em 1em;
+}
+.main-font{
+	font-family: 'Candara','Calisto MT';
+	font-weight: 600; 
+}
+.all-softare-container{
+	display: flex; 
+	padding-left: 3vw; 
+	padding-right: 3vw; 
+}
+.software-container{
+	    display: flex;
+    flex-direction: column;
+    align-items: center;
+	padding: 5px; 
+}
+
+.edu-container{
+	width: 50%; 
+}
+
+.edu-container h2, .work-container h2{
+		font-family: 'Candara','Calisto MT';
+	font-size: 55px;
+text-align: center; 
+	font-weight: 600; 
+}
+.work-container{
+	margin-top: 40px;
+}
+
+.timeline-edu-container{
+	position: relative; 
+
+}
+.container-timeline.edu{
+	    padding: 18px 40px;
+    position: relative;
+    width: 70%;
+    height: 200px;
+}
+.resume-container.edu{
+	height: fit-content;
+	    width: auto;
+}
+
+.Social_Media{
+	display: flex;
+	padding: 20px; 
+	
+}
+.sm_icon{
+	height: 40px; 
+	width: 40px; 
+	transition: 0.5s all; 
+}
+
+.sm_icon:hover{
+transform: scale(1.1);
+	
+}
+
+.contact-section{
+	background: var(--main-bg-contrast);
+	padding: 20px; 
+	
+}
+.wp-form-wrapper{
+	padding: 20px; 
+}
+
+.youtube-embed, .vimeo-embed{
+  margin-bottom: -4px;
+}
+
+.custom-logo{
+	min-height: 200px;
+}
+
+.side-holder{
+	width: 20vw;
+	display: block;
+}
+
+
+@media (max-width: 1000px) { 
+
+	.menu-profile-picture{
+		display: none;
+	}
+	.side-holder{
+		width:0px;
+	}
+
+	#content{
+		flex-direction: column; 
+		
+	}
+	#primary{
+		padding-left: 0px; 
+		padding-top: 6vh; 
+		background: white;
+		
+	}
+	.side-menu{
+		position: fixed; 
+		height: 100px; 
+		width: 100%;
+		z-index: 100000;
+		height: 12vh;
+		      
+	}
+	
+	.social-media, .custom-logo{
+		display: none; 
+	}
+
+
+	
+	.side-nav-element{
+		font-size: 22px;
+	}
+	.sidebar-nav{
+		display: flex;
+		justify-content: space-between;
+		padding: 0px 5px; 
+		
+	}
+	.side-menu-innerdiv{
+		width: 97%; 
+		 justify-content: flex-start;
+		 padding: 0% 2%;
+		 
+
+	}
+	.current{
+		background: none;
+	}
+	
+}
+
+

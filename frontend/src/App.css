@@ -234,7 +234,7 @@ html {
 	position: absolute;
 	top: 0;
 	
-	height: 100%;
+	height: 300px;
 	width: 0%;
 	display: flex;
 	flex-direction: column;
@@ -252,6 +252,7 @@ html {
 	position: relative;
 	transition: all 1s;
 	cursor: pointer;
+	margin-top: -5px;
 }
 
 
@@ -262,15 +263,18 @@ html {
   width: 100%; 
 	
 }
-.post-img{
-	height: 100%; 
-  max-width: 100%;
-}
+.post-img {
+	width: 100%;          /* or set a specific width if needed */
+	height: 300px;        /* fixed height for all images */
+	object-fit: cover;    /* ensures the image fills the container while cropping */
+	object-position: center; /* optional: centers the image within the container */
+  }
+  
 
 .projects-header{
 	background: linear-gradient(178deg, #0070f3 25%, #00c6ff);/*var(--header);*/
 	    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
 }
 	

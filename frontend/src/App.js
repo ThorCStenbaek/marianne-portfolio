@@ -10,6 +10,7 @@ import WorkTimeline from './components/WorkTimeline';
 import CreateProjectForm from './components/CreateProjectForm'; // Admin form component
 import './App.css';  // For CSS styles
 import ChooseVideo from './components/ChooseVideo';
+import Delete from './components/Delete';
 function App() {
   const [active, setActive] = useState(false);
 
@@ -34,6 +35,7 @@ function App() {
             />
             {/* Admin route for managing projects */}
             <Route path="/admin" element={<CreateProjectForm />} />
+            <Route path ="/delete" element={<Delete/>} />
           </Routes>
         </div>
       </div>

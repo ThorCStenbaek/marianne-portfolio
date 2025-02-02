@@ -54,11 +54,14 @@ function Projects() {
   return (
     <div className="projects-section menu-section" id="projects">
       <div className="projects-header">
+      <div className="projects-menu-button"onClick={()=>setSelectedTag("all")}><p>ALL</p></div>
+           
+      
+      <div className="projects-menu-button"onClick={()=>setSelectedTag("grooming")}><p>GROOMING</p></div>
+      <div className="projects-menu-button"onClick={()=>setSelectedTag("environments")}><p>ENVIRONMENTS</p></div>
+
         <div className="projects-menu-button" onClick={()=>setSelectedTag("personal")}><p>PERSONAL</p></div>
-        <div className="projects-menu-button"onClick={()=>setSelectedTag("enviroments")}><p>ENVIROMENTS</p></div>
-        <div className="projects-menu-button"onClick={()=>setSelectedTag("all")}><p>ALL</p></div>
-        <div className="projects-menu-button"onClick={()=>setSelectedTag("generalist")}><p>GENERALIST</p></div>
-        <div className="projects-menu-button"onClick={()=>setSelectedTag("grooming")}><p>GROOMING</p></div>
+
       </div>
 
       <div className="allProjects">

@@ -95,6 +95,7 @@ const ChooseVideo = () => {
             state={true}
             onHover={()=> console.log("a")}
             selected={chosenVideo === "videoOne"}
+            onClick={() => handleChooseVideo("videoOne")}
           />
           <CustomButton
             text="GENERALIST REEL"
@@ -102,6 +103,8 @@ const ChooseVideo = () => {
             onHover={()=> console.log("a")}
 
             selected={chosenVideo === "videoTwo"}
+            onClick={() => handleChooseVideo("videoTwo")}
+            
           />
         </div>
         {/* Video Container */}

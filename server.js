@@ -231,6 +231,48 @@ app.get('/projects', async (req, res) => {
 
 
 
+app.delete('/projects/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Check if the project exists
+    const project = await prisma.project.findUnique({
+      where: { id: Number(id) },
+      include: {
+        metas: true, // Get project meta files
+      },
+    });
+
+    if (!project) {
+      return res.status(404).json({ error: 'Project not found' });
+    }
+
+    // Delete related entries first due to foreign key constraints
+    await prisma.projectMeta.deleteMany({
+      where: { projectId: Number(id) },
+    });
+
+    await prisma.projectTechnology.deleteMany({
+      where: { projectId: Number(id) },
+    });
+
+    await prisma.projectCategory.deleteMany({
+      where: { projectId: Number(id) },
+    });
+
+    // Delete the main project
+    await prisma.project.delete({
+      where: { id: Number(id) },
+    });
+
+    res.json({ message: 'Project deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting project:', error);
+    res.status(500).json({ error: 'An error occurred while deleting the project.' });
+  }
+});
+
+
 
 // Test route
 app.get('/api', (req, res) => {

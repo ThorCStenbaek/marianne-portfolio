@@ -16,10 +16,6 @@ app.use('/images', express.static(path.join(__dirname, 'Images')));
 
 app.use(express.static(path.join(__dirname, 'frontend/build')));
 
-// Serve React frontend for all unknown routes (fixes React Router issues)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-});
 
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -303,6 +299,13 @@ app.post("/isMarianne",(req, res) =>{
   res.json({answer})
 })
 
+
+
+
+// Serve React frontend for all unknown routes (fixes React Router issues)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
 
 
 // Start the server

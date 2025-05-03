@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { hideSideHolder, resetSideHolder } from '../scripts/menuController';
+
 
 
 function Menu({active=null}) {
   const [activeSection, setActiveSection] = useState(active);
 
-  const handleScroll = () => {
+ const handleScroll = (e) => {
       
+    console.log("scroll?", e)
+
+
+
     const sections = document.querySelectorAll('.menu-section');
     const menuElements = document.querySelectorAll('.side-nav-element');
     let currentSection = null;
@@ -29,6 +35,7 @@ function Menu({active=null}) {
     });
   }; 
 
+  
   useEffect(() => {
   
 

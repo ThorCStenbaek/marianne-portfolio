@@ -115,18 +115,12 @@ const ChooseVideo = () => {
     );
   }
 
+  
   // Initial state: no video chosen.
   // Show a full-screen gradient background with centered buttons.
   return (
-    <div
-      style={{
-        height: "500px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "linear-gradient(to bottom, #0070f3, #00c6ff)",
-        position: 'relative'
-      }}
+    <div className="chooseVideoContainer"
+
     >
         <Circles images={amHovering ? amHovering==1 ? videoOneImages : videoTwoImages : null}/>
     

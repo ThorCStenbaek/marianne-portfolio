@@ -61,7 +61,7 @@ function WorkTimeline() {
 
   return (
     <div className='menu-section' id="experience">
-      <Timeline data={workTimelineData} title="Work Experience" />
+      <Timeline data={workTimelineData} title="Work Experience" doHide={true}/>
       <Timeline data={educationData} title="Education" />
     </div>
   );

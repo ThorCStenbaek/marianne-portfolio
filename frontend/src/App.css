@@ -97,7 +97,7 @@ body, html {
 	     
     left: 0px;
     top: 0px;
-  
+    transition: 0.5s all ease;
    
     width: 20vw;
     position: fixed;
@@ -540,10 +540,40 @@ transform: scale(1.1);
 .side-holder{
 	width: 20vw;
 	display: block;
+	transition: 0.5s all ease;
+	margin-top:0px;
+
+}
+.side-menu.hidden {
+	margin-top:-300px;
+
+  }
+.contact-details{
+	width:100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
+.chooseVideoContainer{
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to bottom, #0070f3, #00c6ff);
+	position: relative;
+}
 
 @media (max-width: 1000px) { 
+
+	.chooseVideoContainer{
+		flex-direction: column;
+	}
+
+	.chooseVideoContainer button{
+		width:80% !important;
+	
+	}
 
 	.menu-profile-picture{
 		display: none;
@@ -558,7 +588,7 @@ transform: scale(1.1);
 	}
 	#primary{
 		padding-left: 0px; 
-		padding-top: 6vh; 
+	 
 		background: white;
 		
 	}
@@ -582,17 +612,43 @@ transform: scale(1.1);
 	}
 	.sidebar-nav{
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		padding: 0px 5px; 
+		flex-wrap: wrap;
+
 		
 	}
 	.side-menu-innerdiv{
 		width: 97%; 
 		 justify-content: flex-start;
 		 padding: 0% 2%;
+		 height:fit-content;
 		 
 
 	}
+
+
+
+	.projects-header{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.projects-menu-button{
+		border: none;
+		border-bottom: 1px solid whitesmoke;
+		width:100%;
+	}
+
+	.allProjects{
+		
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			transition: all 0.5s;
+			width: 100%;
+	}
+
+
 	.current{
 		background: none;
 	}

@@ -71,9 +71,17 @@
   cursor: pointer;
 }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .project-modal {
-      width: 90%;
+      width: 95%;
+      padding: 5px;
+      max-width: 200%;
+    }
+    .project-modal-overlay{
+      width:auto
+    }
+    .modal-content{
+      width:100% !important;
     }
   }
   

@@ -36,7 +36,7 @@ function ContactInformation() {
           <FaInstagram className="contact-icon" />
           <div className="contact-details">
             <h3>Instagram</h3>
-            <p><a href="https://www.instagram.com/marianne_artblaes/" target="_blank" rel="noopener noreferrer">@marianne_artblaes</a></p>
+            <p><a href="https://www.instagram.com/m.blaesbjerg/" target="_blank" rel="noopener noreferrer">@marianne_artblaes</a></p>
           </div>
         </div>
 

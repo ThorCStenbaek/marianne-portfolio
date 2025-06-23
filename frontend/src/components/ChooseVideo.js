@@ -4,9 +4,11 @@ import { Circles } from "./mini/Circles";
 import VimeoEmbed from "./VimdeoEmbded";
 // Example video components
 const videoOne = <VimeoEmbed videoId={"1052758376"} />;
-const videoOneImages=["/Images/3mermaze_02.jpg", "/Images/marianne-riis-blaesbjerg-muggesofia2.jpg", "/Images/Ocelot_1.jpg", "/Images/Ocelot_6.jpg"]
-const videoTwo = <VimeoEmbed videoId={"1052761559"} />;
-const videoTwoImages=["/Images/bladerunnerEnv.jpg", "/Images/Nomads_1.jpg", "/Images/marianne-riis-blaesbjerg-qvist-001-06hat-x1-0001.jpg", "/Images/Ocelot_2.jpg"]
+const videoOneImages=[]
+const videoTwo = <VimeoEmbed videoId={"1095677006"} />;
+const videoTwoImages=[]
+const image1 = "/Images/video1.jpg"
+const image2= "/Images/video2.jpg"
 
 const CustomButton = ({ text, onClick, state=false, selected = false, onHover }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -98,7 +100,7 @@ const ChooseVideo = () => {
             onClick={() => handleChooseVideo("videoOne")}
           />
           <CustomButton
-            text="GENERALIST REEL"
+            text="ENVIRONMENT REEL"
             state={true}
             onHover={()=> console.log("a")}
 
@@ -124,6 +126,13 @@ const ChooseVideo = () => {
     >
         <Circles images={amHovering ? amHovering==1 ? videoOneImages : videoTwoImages : null}/>
     
+
+                  <div style={{width: "50%", position: "absolute", left: "0", height:"100%"}}>
+            <img src={image1} alt="Video One" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          </div>
+          <div style={{width: "50%", position: "absolute", right:"0", height:"100%"}}>
+            <img src={image2} alt="Video One" style={{ width: "100%", height: "100%",  objectFit: "cover" }} />
+          </div>
         <CustomButton
           text="GROOM REEL"
           onHover={hoverOne}
@@ -132,7 +141,7 @@ const ChooseVideo = () => {
           onClick={() => handleChooseVideo("videoOne")}
         />
         <CustomButton
-          text="GENERALIST REEL"            
+          text="ENVIRONMENT REEL"            
           onHover={hoverTwo}
 
  

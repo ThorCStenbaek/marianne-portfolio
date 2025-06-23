@@ -29,14 +29,13 @@ body, html {
   
 .menu-profile-picture {
     width: 75%;
-	
     border-radius: 50%;
     object-fit: cover;
     /* Border to make the profile picture stand out */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	margin-top: 40px;
+    aspect-ratio: 1/1;
   }
-
 
 .Menu {
   width: 20vw; /* Fixed width for the menu */

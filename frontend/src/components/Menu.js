@@ -62,7 +62,7 @@ function Menu({active=null}) {
              />
              <div style= {{textAlign: 'center', color: 'white'}}>
              <h3 style={{margin:"5px"}}>Marianne Blæsbjerg</h3>
-             <h6 style={{margin:"5px"}}> Groom Artist & 3D Generalist</h6>
+             <h6 style={{margin:"5px"}}> Groom Artist & Environment Artist</h6>
              </div>
         <nav className="sidebar-nav">
           <a className="side-nav-element current" onClick={()=>{document.querySelector("#home").scrollIntoView(); handleScroll()}}>Home</a>

@@ -80,7 +80,14 @@ const onTouchEnd = () => {
     // Fetch the projects data from your API
     fetch('/projects')
       .then(response => response.json())
-      .then(data => {setProjects(data);console.log("new projects:", data)})
+      .then(data => { 
+        //remove first from data
+        const first=[data[data.length-1], data[data.length-2]]
+        const tiger= data.shift()
+        data=data.slice(0, data.length-2)
+
+        
+        setProjects(first.concat(tiger).concat(data) );console.log("new projects:", data)})
  
       .catch(error => console.error('Error fetching projects:', error));
   }, []);

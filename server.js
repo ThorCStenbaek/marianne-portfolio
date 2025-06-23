@@ -36,6 +36,52 @@ app.post('/upload', upload.single('image'), (req, res) => {
 
 // Serve static files from the "public" directory
 
+/*
+app.get("/lol", async (req, res) => {
+  try {
+    const technology = await prisma.technology.create({
+      data: {
+        name: 'Substance Designer',
+        image: 'Images/Softwares/sub.jpg'
+      }
+    })
+    res.json({ message: 'Technology created successfully', technology })
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: 'An error occurred while creating technology.' })
+  }
+})
+  
+
+
+
+app.get("/delete-technology", async (req, res) => {
+  try {
+    // Option 1: Delete the most recent technology
+    const mostRecent = await prisma.technology.findFirst({
+      orderBy: {
+        id: 'desc'
+      }
+    })
+    
+    if (mostRecent) {
+      await prisma.technology.delete({
+        where: {
+          id: mostRecent.id
+        }
+      })
+      res.json({ message: 'Most recent technology deleted successfully', deleted: mostRecent })
+    } else {
+      res.status(404).json({ error: 'No technologies found to delete' })
+    }
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: 'An error occurred while deleting technology.' })
+  }
+})
+
+*/
+
 app.get('/technologies', async (req, res) => {
   try {
     const technologies = await prisma.technology.findMany();

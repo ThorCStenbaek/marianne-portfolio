@@ -87,7 +87,7 @@ const onTouchEnd = () => {
         data=data.slice(0, data.length-2)
 
         
-        setProjects(first.concat(tiger).concat(data) );console.log("new projects:", data)})
+        setProjects(first.concat(tiger).concat(data) );console.log("new projects:", first.concat(tiger).concat(data))})
  
       .catch(error => console.error('Error fetching projects:', error));
   }, []);
@@ -254,7 +254,7 @@ const onTouchEnd = () => {
       <div>
         <div style={{textAlign: 'center'}} className="metas-list">
           {selectedProject.metas.map((meta, index) => (
-            !meta.url.endsWith("mp4") ? (
+            !meta.url.endsWith("mp4") && !meta.url.endsWith(".mov") ? (
               <img 
                 key={index} 
                 src={meta.url} 

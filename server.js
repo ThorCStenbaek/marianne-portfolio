@@ -338,16 +338,16 @@ app.get("/api", (req, res) => {
 app.get("/api/education", (req, res) => {
   const educationData = [
     {
-      name: "Upper Secondary Education at Aarhus Business College",
-      date: "August 2008 - June 2011",
-      description: "Graduated with studies in Communications.",
-      extraInfo: "",
-    },
-    {
       name: "Bachelor Degree in Computer Graphic Arts at The Animation Workshop",
       date: "August 2017 - January 2021",
       description:
         "Completed a bachelor's degree in Computer Graphic Arts. The whole 3D pipeline",
+      extraInfo: "",
+    },
+    {
+      name: "Upper Secondary Education at Aarhus Business College",
+      date: "August 2008 - June 2011",
+      description: "Graduated with studies in Communications.",
       extraInfo: "",
     },
   ];

@@ -71,13 +71,22 @@ function About() {
           <div className="skills-section">
             <h3 className="box-title">Resume</h3>
                       <p>
-                        I'm a 3D artist with a background in animation and visual storytelling, currently focused on stylised environments, characters, and game-ready assets. My work blends artistic expression with structure — whether I'm sculpting, grooming, texturing, or building worlds with a strong narrative tone.
+                        I'm a 3D Generalist based in Copenhagen with a background in animation, visualization, grooming, and game-related production.
                       </p>
                       <p>
-                        I enjoy working across disciplines and bringing attention to detail, atmosphere, and flow in everything I create. Recently, I've been diving into foliage creation and environment building, drawing on my experience with character grooming to shape organic, believable assets that feel both stylised and grounded.
+                        Most recently, I spent a year at MOOD Publishing working on projects including HITMAN: The Board Game, Deep Rock Galactic figurines, and Satisfactory: The Board Game. My work covered 3D visualization, trailers and campaign scrollers, as well as playtesting, 3D printing, prototyping, table presence, and exploring board game mechanics.
                       </p>
                       <p>
-                        I'm curious, collaborative, and motivated by meaningful visual design, whether it's for games, animation, or something in between.
+                        Before moving into board games, I worked in animation and feature film production, including as Lead Groom on "Mugge og hans mærkelige hjerne" and as a Groom Artist on productions such as "Mermaze," "Rainbow High," and "L.O.L." This gave me experience working across production pipelines, collaborating with different departments, and balancing creative and technical problem-solving.
+                      </p>
+                      <p>
+                        I enjoy working across different parts of the 3D process and especially like projects where I can combine visual storytelling, world-building, animation, prototyping, and hands-on problem solving.
+                      </p>
+                      <p>
+                        My main tools include Maya, Blender, ZBrush, Substance Painter, Unreal Engine 5, Unity, Yeti, Houdini, After Effects.
+                      </p>
+                      <p>
+                        I hold a Bachelor's degree in Computer Graphic Arts from The Animation Workshop and also studied classical drawing at The Drawing Academy.
                       </p>
           </div>
         </div>
